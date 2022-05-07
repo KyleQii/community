@@ -1,0 +1,176 @@
+<!doctype html>
+
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- 必须的 meta 标签 -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title th:text="${discussion.title}"></title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/community.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/community.js" type="application/javascript"></script>
+    <script src="/js/bootstrap.bundle.min.js" type="application/javascript"></script>
+    <script src="/js/moment.js" type="application/javascript"></script>
+
+</head>
+<body>
+<!--<h1>发布</h1>-->
+
+<!--放图标-->
+<div th:insert="navigation :: nav"></div>
+<div class="container main profile">
+    <div class="row">
+        <!--        左边主要内容-->
+        <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12">
+
+            <!--            正文-->
+            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4 class="discussion-title"><span th:text="${discussion.title}"></span></h4>
+
+                <p class="card-text"><small class="text-muted">
+                    作者：<span th:text="${discussion.user.name}"></span>
+                    | 发布时间：<span th:text="${#dates.format(discussion.gmtCreate,'yyyy-MM-dd HH:mm')}"></span>
+                    | 阅读数：<span th:text="${discussion.viewCount}"></span>
+                </small></p>
+                <hr>
+<!--                内容-->
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                     th:text="${discussion.description}">
+                </div>
+<!--                标签-->
+                <hr class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <span class="discussion-tag" th:each="tag : ${discussion.tag.split(',')}">
+                        <i class="bi bi-tags"></i>
+                        <a th:href="@{/(page=1,tag=${tag})}"
+                           th:text="${tag}" class="community-tag"></a>
+                    </span>
+                </div>
+
+
+
+<!--                编辑-->
+                <hr>
+                <a th:href="@{'/publish/'+${discussion.id}}" class="community-menu float-start text-decoration-none"
+                   th:if="${session.user!=null&&session.user.id==discussion.creator}">
+                    <span class="bi bi-pencil-square"></span>编辑
+                </a>
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <!--            回复-->
+            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-0">
+                <h4>
+                    <span th:text="${discussion.commentCount}"></span> 个回复
+                </h4>
+                <hr class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-0">
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 comments"
+                     th:each="comment:${comments}">
+                    <div class="media">
+                        <div class="media-Id" >
+                            <a href="#" class="h-100 d-inline-block " style="width:60px;">
+                                <img class="img-thumbnail rounded-3 h-100" th:src="${comment.user.avatarUrl}">
+                            </a>
+                            <a href="#" class="h-100 d-inline-block">
+                                <div class="align-content-center" th:text="${comment.user.name}"></div>
+                            </a>
+                        </div>
+                        <div class="media-body" th:id="${'comment-body-'+comment.id}">
+                            <div th:text="${comment.content}"></div>
+                            <div class="comment-menu">
+                                <i class="bi bi-hand-thumbs-up"></i>
+                                <span class="comment-icon" th:data-id="${comment.id}" onclick="collapseComments(this)">
+                                    <i class="bi bi-chat-left-dots "></i>
+                                    <span th:text="${comment.commentCount}"></span>
+                                </span>
+                                <ul class="float-end">
+                                    <span th:text="${#dates.format(comment.gmtCreate,'yyyy-MM-dd HH:mm')}"></span>
+                                </ul>
+                            </div>
+                            <!--                二级评论-->
+                            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 sub-comments collapse "
+                                 th:id="${'comment-'+comment.id}">
+                                <input type="text" class="form-control" placeholder="评论一下..."
+                                       th:id="${'input-'+comment.id}">
+                                <div class="mt-3 d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button type="button" class="btn btn-success" onclick="comment(this)" th:data-id="${comment.id}">
+                                        评论
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <!--            回复输入框-->
+            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4>
+                    提交回复
+                </h4>
+                <hr class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="comment_section">
+
+                    <div style="height: 60px;">
+                        <div class="h-100 d-inline-block " style="width:60px;">
+                            <img class="img-thumbnail rounded-3" th:src="${discussion.user.avatarUrl}">
+                        </div>
+                        <div class="h-100 d-inline-block">
+                            <div class="align-content-center" th:text="${discussion.user.name}"></div>
+                        </div>
+                    </div>
+
+                    <div class="my-2">
+                        <input type="hidden" id="discussion_id" th:value="${discussion.id}">
+                        <textarea class="form-control" id="comment_content" style="height: 100px"></textarea>
+                    </div>
+
+                    <div class="mb-3 d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button class="btn btn-primary" onclick="post()">回复</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--       右边主要内容-->
+        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4 class="discussion-title">发起人</h4>
+                <div style="height: 60px;">
+                    <div class="h-100 d-inline-block " style="width:60px;">
+                        <img class="img-thumbnail  rounded-circle" th:src="${discussion.user.avatarUrl}">
+                    </div>
+                    <div class="h-100 d-inline-block">
+                        <div class="align-content-center" th:text="${discussion.user.name}"></div>
+                    </div>
+                </div>
+
+            </div>
+            <!--相关问题-->
+            <hr>
+            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4>相关问题</h4>
+                <ul class="discussion-related">
+                    <li th:each="related : ${relatedDiscussions}">
+                        <a th:href="@{'/discussion/'+ ${related.id}}" th:text="${related.title}"></a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

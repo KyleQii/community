@@ -1,0 +1,109 @@
+<!doctype html>
+
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- 必须的 meta 标签 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>发布 -伙聚</title>
+
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/community.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <script src="/js/bootstrap.bundle.min.js" type="application/javascript"></script>
+    <script src="/js/community.js" type="application/javascript"></script>
+
+</head>
+<body>
+<!--<h1>发布</h1>-->
+
+<div th:insert="navigation :: nav"></div>
+
+<div class="container main">
+    <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+            <h2><i class="bi bi-plus-circle"></i>发布</h2>
+            <hr>
+            <form action="/publish" method="post">
+                <input type="hidden" name="id" th:value="${id}"></input>
+                <div class="mb-3">
+                    <label for="title" class="form-label">发表标题</label>
+                    <input type="text" class="form-control" th:value="${title}" id="title" name="title" placeholder="发表标题...">
+                </div>
+                <div class="mb-3">
+                    <label for="title" class="form-label">内容补充(必填，请参照右侧提示)：</label>
+                    <textarea name="description" id="description" th:text="${description}" class="form-control" cols="20" rows="10"></textarea>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="tag">添加标签:</label>
+                    <input type="text" class="form-control" th:value="${tag}" id="tag" name="tag"
+                           autocomplete="off"
+                           placeholder="输入标签，以，号分隔"
+                           onclick="showSelectTag()">
+                    <div id="select-tag" class="publish-tag-tab">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" th:each="selectCategory,selectCategoryStat: ${tags}"
+                                th:class="${selectCategoryStat.first ? 'active':''}">
+                                <a th:href="${'#'+selectCategory.categoryName}" aria-controls="home" role="tab"
+                                   data-toggle="tab" th:text="${selectCategory.categoryName}"></a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" th:id="${selectCategory.categoryName}"
+                                 th:each="selectCategory: ${tags}"
+                                 th:class="${selectCategoryStat.first ? 'active tab-pane':'tab-pane'}">
+                                <span>
+                                    <span th:each="selectTag: ${selectCategory.tags}">
+                                    <span class="community-tag" onclick="selectTag(this)"
+                                          th:data-tag="${selectTag}"
+                                          th:text="${' '+selectTag}">
+                                    </span>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid main ">
+                    <div class="row">
+                        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                            <div class="alert alert-danger col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                                 th:text="${error}"
+                                 th:if="${error != null}">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <button type="submit" class="btn btn-success btn-publish ">
+                                发布
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </form>
+
+        </div>
+
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+            <h3>论坛发起指南</h3>
+            •问题标题:请用精简的语言描述您发布的标题，不超过25字<br>
+
+            •问题补充:详细补充您的内容，并确保内容描述清晰直观，并提供一些相关的资料<br>
+
+            •选择标签:选择一个或者多个合适的标签，用逗号隔开，每个标签不超过10个字<br>
+
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

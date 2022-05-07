@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- 必须的 meta 标签 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ERROR</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/bootstrap.bundle.min.js" type="application/javascript"></script>
+
+</head>
+<body>
+
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold"><trans>到底是哪里出现问题了呢？</trans></h1>
+        <p class="col-md-8 fs-4"><trans th:text="${message}">服务器要炸啦，客官等一下再试试吧~</trans></p>
+        <button class="btn btn-primary btn-lg" type="button" href="/">返回主页</button>
+    </div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- 必须的 meta 标签 -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title th:text="${sectionName}"></title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/community.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="/js/bootstrap.bundle.min.js" type="application/javascript"></script>
+
+</head>
+<body>
+<!--<h1>发布</h1>-->
+
+<!--放图标-->
+<div th:insert="navigation :: nav"></div>
+<div class="container main profile">
+    <div class="row">
+        <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12">
+            <h2><span th:text="${sectionName}"></span></h2>
+            <hr>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" th:if="${section=='discussions'}">
+                <div class="card mb-3" th:each="discussion:${pagination.data}">
+                    <div class="row g-0">
+                        <div class="col-md-12">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a th:href="@{'/discussion/'+${discussion.id}}" th:text="${discussion.title}"></a>
+                                </h5>
+                                <p class="card-text">
+                                    <small class="text-muted">
+                                        <span th:text="${discussion.commentCount}"></span>个回复|
+                                        <span th:text="${discussion.viewCount}"></span>次浏览|
+                                        <span th:text="${#dates.format(discussion.gmtCreate,'yyyy-MM-dd HH:mm')}"></span>
+                                        <a th:href="@{'/publish/'+${discussion.id}}"
+                                           class="community-menu float-start text-decoration-none"
+                                           th:if="${session.user!=null&&session.user.id==discussion.creator}">
+                                            <span class="bi bi-pencil-square"></span>编辑
+                                        </a>
+                                    </small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" th:if="${section=='replies'}">
+                <div class="card mb-3" th:each="notification:${pagination.data}">
+                    <div class="row g-0">
+                        <div class="col-md-12">
+                            <div class="card-body">
+                                <p class="card-title">
+                                    <span th:text="${notification.notifierName +' '+ notification.typeName+' '}"></span>
+                                    <a th:href="@{'/notification/'+${notification.id}}"
+                                       th:text="${notification.outerTitle}">
+                                    </a>
+                                    <span class="label label-danger" th:if="${notification.status == 0}">未读</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item" th:if="${pagination.showFirstPage}">
+                            <a class="page-link" th:href="@{'/profile/'+${section}(page=${1})}"
+                               aria-label="Previous">
+                                <span aria-hidden="true">&lt;&lt;</span>
+                            </a>
+                        </li>
+                        <li class="page-item" th:if="${pagination.showPrevious}">
+
+                            <a class="page-link" th:href="@{'/profile/'+${section}(page=${pagination.page -1})}"
+                               aria-label="Previous">
+                                <span aria-hidden="true">&lt;</span>
+                            </a>
+                        </li>
+                        <li th:class="${pagination.page == page}?'page-item active':'page-item'"
+                            th:each="page:${pagination.pages}">
+                            <a class="page-link" th:href="@{'/profile/'+${section}(page=${page})}"
+                               th:text="${page}">
+                            </a>
+                        </li>
+                        <li class="page-item" th:if="${pagination.showNext}">
+                            <a class="page-link" th:href="@{'/profile/'+${section}(page=${pagination.page +1})}"
+                               aria-label="Previous">
+                                <span aria-hidden="true">&gt;</span>
+                            </a>
+                        </li>
+                        <li class="page-item" th:if="${pagination.showEndPage}">
+                            <a class="page-link" th:href="@{'/profile/'+${section}(page=${pagination.totalPage})}"
+                               aria-label="Previous">
+                                <span aria-hidden="true">&gt;&gt;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+            <div class=" list-group section">
+                <a href="/profile/account"
+                   th:class="${section == 'account'}?'list-group-item list-group-item-action active':'list-group-item list-group-item-action'"
+                   type="button">个人资料</a>
+                <a href="/profile/discussions"
+                   th:class="${section == 'discussions'}?'list-group-item list-group-item-action active':'list-group-item list-group-item-action'"
+                   type="button">我的问题</a>
+                <a href="/profile/replies"
+                   th:class="${section == 'replies'}?'list-group-item list-group-item-action active':'list-group-item list-group-item-action'"
+                   type="button">最新回复
+                    <span class="badge bg-primary rounded-pill" th:text="${session.unreadCount}"></span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

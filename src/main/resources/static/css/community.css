@@ -1,0 +1,109 @@
+body {
+    background: #efefef;
+}
+
+.main {
+    background-color: white;
+
+}
+
+.btn-publish {
+    float: right;
+    margin-bottom: 15px;
+}
+
+.profile .section{
+    margin: 15px;
+}
+.discussion-title{
+    margin-top: 25px;
+}
+
+.discussion-tag {
+    margin-right: 5px;
+}
+
+
+.discussion-related{
+    line-height: 20px;
+    font-size: 12px;
+    margin-left: 0;
+    list-style: none;
+    padding-left: 0;
+
+}
+.publish-tag-tab{
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.community-menu{
+
+    font-size: 13px;
+    margin-bottom: 15px;
+    color: #999;
+}
+
+.img-avatar{
+    width: 120px;
+    height: 120px;
+}
+
+.comments {
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.sub-comments{
+    border-radius: 5px;
+    border: 1px solid #eee;
+    padding: 30px;
+
+}
+
+.comment-menu{
+    color: #999;
+    margin-top: 5px;
+}
+.comment-menu .comment-icon {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.comment-menu .bi{
+    margin-right: 6px;
+    font-size: 15px;
+}
+.comment-menu .active{
+    color: #499ef3;
+}
+.comment-menu .bi:hover{
+    color: #499ef3;
+}
+
+.community-tag:hover {
+    background-color: #339dff;
+    color: #fff !important;
+    text-decoration-line: none;
+}
+
+.community-tag {
+    text-decoration-line: none;
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    line-height: 16px;
+    padding: 2px 5px;
+    background-color: #99cfff;
+    font-size: 12px;
+    color: #fff !important;
+    border-radius: 4px;
+    margin: 4px;
+}
+
+.media-Id{
+    height: 60px;
+}
+.media-body{}

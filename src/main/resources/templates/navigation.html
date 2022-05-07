@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<div th:fragment="nav">
+    <nav class="navbar navbar-expand-lg navbar-light" style="margin-bottom:30px; background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">首页</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">热门社团</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">社团分类</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">资源分享</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">校园论坛</a>   <!--里面包括寻人寻物，表白，吐槽-->
+                    </li>
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#">校内二手市场</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#">校招计划</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link disabled">Disabled</a>-->
+<!--                    </li>-->
+                    <li class="nav-item">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="搜索社团或用户" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">search</button>
+                        </form>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown" th:if="${session.user!=null}">
+
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false" th:text="${session.user.getName()}">
+                            <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/profile/information">个人资料</a></li>
+                            <li><a class="dropdown-item" href="/profile/discussions">消息中心</a></li>
+                            <li><a class="dropdown-item" href="/logout">退出登录</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item" th:if="${session.user==null}">
+
+                        <a class="nav-link"
+                           href="https://gitee.com/oauth/authorize?client_id=a2b730b14a7047c3f50ce9a1cadb18fcc02b7e0b894a146457d33ea13e63f5db&redirect_uri=http://localhost:8887/callback/gitee&response_type=code">登录</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" th:if="${session.user!=null}">
+                        <a href="/profile/replies">通知
+                        <span class="badge" th:text="${session.unreadCount}"></span></a>
+                    </li>
+
+                    <li class="nav-item" th:if="${session.user!=null}">
+                        <a href="/publish">发布主题</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</div>
+
+</body>
+
+</html>
