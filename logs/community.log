@@ -5896,3 +5896,63 @@ org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property o
 2022-05-15 19:57:44.229  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:57:44 CST 2022
 2022-05-15 19:57:49.219  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:57:49 CST 2022
 2022-05-15 19:57:49.223  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:57:49.223  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:57:49 CST 2022
+2022-05-15 19:57:54.230  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:57:54 CST 2022
+2022-05-15 19:57:54.234  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:57:54.234  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:57:54 CST 2022
+2022-05-15 19:57:59.227  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:57:59 CST 2022
+2022-05-15 19:57:59.230  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:57:59.230  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:57:59 CST 2022
+2022-05-15 19:58:04.225  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:58:04 CST 2022
+2022-05-15 19:58:04.228  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:58:04.229  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:58:04 CST 2022
+2022-05-15 19:58:09.232  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:58:09 CST 2022
+2022-05-15 19:58:09.235  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:58:09.235  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:58:09 CST 2022
+2022-05-15 19:58:14.230  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:58:14 CST 2022
+2022-05-15 19:58:14.234  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:58:14.235  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:58:14 CST 2022
+2022-05-15 19:58:19.227  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:58:19 CST 2022
+2022-05-15 19:58:19.230  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:58:19.231  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:58:19 CST 2022
+2022-05-15 19:58:24.232  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:58:24 CST 2022
+2022-05-15 19:58:24.237  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:58:24.237  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:58:24 CST 2022
+2022-05-15 19:58:29.226  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:58:29 CST 2022
+2022-05-15 19:58:29.229  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:58:29.229  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:58:29 CST 2022
+2022-05-15 19:58:34.223  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:58:34 CST 2022
+2022-05-15 19:58:34.227  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:58:34.228  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:58:34 CST 2022
+2022-05-15 19:58:39.233  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:58:39 CST 2022
+2022-05-15 19:58:39.236  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:58:39.236  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:58:39 CST 2022
+2022-05-15 19:58:44.218  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:58:44 CST 2022
+2022-05-15 19:58:44.221  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:58:44.221  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:58:44 CST 2022
+2022-05-15 19:58:49.225  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:58:49 CST 2022
+2022-05-15 19:58:49.232  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:58:49.233  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:58:49 CST 2022
+2022-05-15 19:58:54.230  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:58:54 CST 2022
+2022-05-15 19:58:54.236  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:58:54.236  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:58:54 CST 2022
+2022-05-15 19:58:59.221  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:58:59 CST 2022
+2022-05-15 19:58:59.223  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:58:59.223  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:58:59 CST 2022
+2022-05-15 19:59:04.223  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:59:04 CST 2022
+2022-05-15 19:59:04.229  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:59:04.229  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:59:04 CST 2022
+2022-05-15 19:59:09.220  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:59:09 CST 2022
+2022-05-15 19:59:09.222  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:59:09.222  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:59:09 CST 2022
+2022-05-15 19:59:14.219  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:59:14 CST 2022
+2022-05-15 19:59:14.222  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:59:14.223  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:59:14 CST 2022
+2022-05-15 19:59:19.229  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:59:19 CST 2022
+2022-05-15 19:59:19.231  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:59:19.231  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:59:19 CST 2022
+2022-05-15 19:59:24.228  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:59:24 CST 2022
+2022-05-15 19:59:24.232  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
+2022-05-15 19:59:24.232  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Sun May 15 19:59:24 CST 2022
+2022-05-15 19:59:29.225  INFO 27804 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Sun May 15 19:59:29 CST 2022
+2022-05-15 19:59:29.229  INFO 27804 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=资源分享, priority=10), HotTagDTO(name=校园论坛, priority=11), HotTagDTO(name=学习, priority=24), HotTagDTO(name=java, priority=18), HotTagDTO(name=456, priority=13)]
