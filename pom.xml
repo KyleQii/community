@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>seekgroup.college</groupId>
-    <artifactId>community_first</artifactId>
+    <artifactId>community</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>community</name>
     <description>Demo project for Spring Boot</description>
@@ -94,11 +94,7 @@
             <groupId>org.xmlunit</groupId>
             <artifactId>xmlunit-core</artifactId>
         </dependency>
-        <dependency>
-            <groupId>seekgroup.college</groupId>
-            <artifactId>community</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
