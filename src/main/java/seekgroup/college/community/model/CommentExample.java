@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * 
- * @author Kyle on 0029 2022/4/29.
+ * @author Kyle on 0008 2022/5/8.
  * @version 1.0
  */
 public class CommentExample {
@@ -230,62 +230,62 @@ public class CommentExample {
         }
 
         public Criteria andTypeIsNull() {
-            addCriterion("\"TYPE\" is null");
+            addCriterion("`TYPE` is null");
             return (Criteria) this;
         }
 
         public Criteria andTypeIsNotNull() {
-            addCriterion("\"TYPE\" is not null");
+            addCriterion("`TYPE` is not null");
             return (Criteria) this;
         }
 
         public Criteria andTypeEqualTo(Integer value) {
-            addCriterion("\"TYPE\" =", value, "type");
+            addCriterion("`TYPE` =", value, "type");
             return (Criteria) this;
         }
 
         public Criteria andTypeNotEqualTo(Integer value) {
-            addCriterion("\"TYPE\" <>", value, "type");
+            addCriterion("`TYPE` <>", value, "type");
             return (Criteria) this;
         }
 
         public Criteria andTypeGreaterThan(Integer value) {
-            addCriterion("\"TYPE\" >", value, "type");
+            addCriterion("`TYPE` >", value, "type");
             return (Criteria) this;
         }
 
         public Criteria andTypeGreaterThanOrEqualTo(Integer value) {
-            addCriterion("\"TYPE\" >=", value, "type");
+            addCriterion("`TYPE` >=", value, "type");
             return (Criteria) this;
         }
 
         public Criteria andTypeLessThan(Integer value) {
-            addCriterion("\"TYPE\" <", value, "type");
+            addCriterion("`TYPE` <", value, "type");
             return (Criteria) this;
         }
 
         public Criteria andTypeLessThanOrEqualTo(Integer value) {
-            addCriterion("\"TYPE\" <=", value, "type");
+            addCriterion("`TYPE` <=", value, "type");
             return (Criteria) this;
         }
 
         public Criteria andTypeIn(List<Integer> values) {
-            addCriterion("\"TYPE\" in", values, "type");
+            addCriterion("`TYPE` in", values, "type");
             return (Criteria) this;
         }
 
         public Criteria andTypeNotIn(List<Integer> values) {
-            addCriterion("\"TYPE\" not in", values, "type");
+            addCriterion("`TYPE` not in", values, "type");
             return (Criteria) this;
         }
 
         public Criteria andTypeBetween(Integer value1, Integer value2) {
-            addCriterion("\"TYPE\" between", value1, value2, "type");
+            addCriterion("`TYPE` between", value1, value2, "type");
             return (Criteria) this;
         }
 
         public Criteria andTypeNotBetween(Integer value1, Integer value2) {
-            addCriterion("\"TYPE\" not between", value1, value2, "type");
+            addCriterion("`TYPE` not between", value1, value2, "type");
             return (Criteria) this;
         }
 

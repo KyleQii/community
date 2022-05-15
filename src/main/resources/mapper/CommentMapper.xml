@@ -3,7 +3,7 @@
 <mapper namespace="seekgroup.college.community.mapper.CommentMapper">
   <resultMap id="BaseResultMap" type="seekgroup.college.community.model.Comment">
     <!--@mbg.generated-->
-    <!--@Table "COMMENT"-->
+    <!--@Table `comment`-->
     <id column="ID" jdbcType="BIGINT" property="id" />
     <result column="PARENT_ID" jdbcType="BIGINT" property="parentId" />
     <result column="TYPE" jdbcType="INTEGER" property="type" />
@@ -76,7 +76,7 @@
   </sql>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    ID, PARENT_ID, "TYPE", COMMENTATOR, GMT_CREATE, GMT_MODIFIED, LIKE_COUNT, CONTENT, 
+    ID, PARENT_ID, `TYPE`, COMMENTATOR, GMT_CREATE, GMT_MODIFIED, LIKE_COUNT, CONTENT, 
     COMMENT_COUNT
   </sql>
   <select id="selectByExample" parameterType="seekgroup.college.community.model.CommentExample" resultMap="BaseResultMap">
@@ -86,7 +86,7 @@
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from "COMMENT"
+    from `comment`
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -98,24 +98,24 @@
     <!--@mbg.generated-->
     select 
     <include refid="Base_Column_List" />
-    from "COMMENT"
+    from `comment`
     where ID = #{id,jdbcType=BIGINT}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     <!--@mbg.generated-->
-    delete from "COMMENT"
+    delete from `comment`
     where ID = #{id,jdbcType=BIGINT}
   </delete>
   <delete id="deleteByExample" parameterType="seekgroup.college.community.model.CommentExample">
     <!--@mbg.generated-->
-    delete from "COMMENT"
+    delete from `comment`
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
   <insert id="insert" keyColumn="ID" keyProperty="id" parameterType="seekgroup.college.community.model.Comment" useGeneratedKeys="true">
     <!--@mbg.generated-->
-    insert into "COMMENT" (PARENT_ID, "TYPE", COMMENTATOR, 
+    insert into `comment` (PARENT_ID, `TYPE`, COMMENTATOR, 
       GMT_CREATE, GMT_MODIFIED, LIKE_COUNT, 
       CONTENT, COMMENT_COUNT)
     values (#{parentId,jdbcType=BIGINT}, #{type,jdbcType=INTEGER}, #{commentator,jdbcType=BIGINT}, 
@@ -124,13 +124,13 @@
   </insert>
   <insert id="insertSelective" keyColumn="ID" keyProperty="id" parameterType="seekgroup.college.community.model.Comment" useGeneratedKeys="true">
     <!--@mbg.generated-->
-    insert into "COMMENT"
+    insert into `comment`
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="parentId != null">
         PARENT_ID,
       </if>
       <if test="type != null">
-        "TYPE",
+        `TYPE`,
       </if>
       <if test="commentator != null">
         COMMENTATOR,
@@ -180,14 +180,14 @@
   </insert>
   <select id="countByExample" parameterType="seekgroup.college.community.model.CommentExample" resultType="java.lang.Long">
     <!--@mbg.generated-->
-    select count(*) from "COMMENT"
+    select count(*) from `comment`
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
     <!--@mbg.generated-->
-    update "COMMENT"
+    update `comment`
     <set>
       <if test="record.id != null">
         ID = #{record.id,jdbcType=BIGINT},
@@ -196,7 +196,7 @@
         PARENT_ID = #{record.parentId,jdbcType=BIGINT},
       </if>
       <if test="record.type != null">
-        "TYPE" = #{record.type,jdbcType=INTEGER},
+        `TYPE` = #{record.type,jdbcType=INTEGER},
       </if>
       <if test="record.commentator != null">
         COMMENTATOR = #{record.commentator,jdbcType=BIGINT},
@@ -223,10 +223,10 @@
   </update>
   <update id="updateByExample" parameterType="map">
     <!--@mbg.generated-->
-    update "COMMENT"
+    update `comment`
     set ID = #{record.id,jdbcType=BIGINT},
       PARENT_ID = #{record.parentId,jdbcType=BIGINT},
-      "TYPE" = #{record.type,jdbcType=INTEGER},
+      `TYPE` = #{record.type,jdbcType=INTEGER},
       COMMENTATOR = #{record.commentator,jdbcType=BIGINT},
       GMT_CREATE = #{record.gmtCreate,jdbcType=BIGINT},
       GMT_MODIFIED = #{record.gmtModified,jdbcType=BIGINT},
@@ -239,13 +239,13 @@
   </update>
   <update id="updateByPrimaryKeySelective" parameterType="seekgroup.college.community.model.Comment">
     <!--@mbg.generated-->
-    update "COMMENT"
+    update `comment`
     <set>
       <if test="parentId != null">
         PARENT_ID = #{parentId,jdbcType=BIGINT},
       </if>
       <if test="type != null">
-        "TYPE" = #{type,jdbcType=INTEGER},
+        `TYPE` = #{type,jdbcType=INTEGER},
       </if>
       <if test="commentator != null">
         COMMENTATOR = #{commentator,jdbcType=BIGINT},
@@ -270,9 +270,9 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="seekgroup.college.community.model.Comment">
     <!--@mbg.generated-->
-    update "COMMENT"
+    update `comment`
     set PARENT_ID = #{parentId,jdbcType=BIGINT},
-      "TYPE" = #{type,jdbcType=INTEGER},
+      `TYPE` = #{type,jdbcType=INTEGER},
       COMMENTATOR = #{commentator,jdbcType=BIGINT},
       GMT_CREATE = #{gmtCreate,jdbcType=BIGINT},
       GMT_MODIFIED = #{gmtModified,jdbcType=BIGINT},

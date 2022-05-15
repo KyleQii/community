@@ -1,12 +1,9 @@
 package seekgroup.college.community.service;
 
 
-import com.github.pagehelper.PageHelper;
-import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import seekgroup.college.community.dto.DiscussionDTO;
 import seekgroup.college.community.dto.NotificationDTO;
 import seekgroup.college.community.dto.PaginationDTO;
 import seekgroup.college.community.enums.NotificationStatusEnum;
@@ -14,7 +11,6 @@ import seekgroup.college.community.enums.NotificationTypeEnum;
 import seekgroup.college.community.exception.CustomizeErrorCode;
 import seekgroup.college.community.exception.CustomizeException;
 import seekgroup.college.community.mapper.NotificationMapper;
-import seekgroup.college.community.model.Discussion;
 import seekgroup.college.community.model.Notification;
 import seekgroup.college.community.model.NotificationExample;
 import seekgroup.college.community.model.User;
@@ -24,8 +20,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * @author Kyle on 0019 2022/2/19.
- * @version 1.0
+ * Created by codedrinker on 2019/6/14.
  */
 @Service
 public class NotificationService {
@@ -60,15 +55,13 @@ public class NotificationService {
         paginationDTO.setPagination(totalPage, page);
 
         //size*(page-1)
-        Integer offset = size * (page - 1);
-        List<Notification> notifications=notificationMapper.list(offset,size);
-        PageHelper.startPage(offset,size);
+        Integer offset = size * (page);
+
+        List<Notification> notifications = notificationMapper.list(offset, size);
 
         if (notifications.size() == 0) {
             return paginationDTO;
         }
-
-
 
         List<NotificationDTO> notificationDTOS = new ArrayList<>();
 

@@ -1,7 +1,6 @@
 package seekgroup.college.community.cache;
 
 
-import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import seekgroup.college.community.dto.TagDTO;
 
 import java.util.ArrayList;
@@ -56,14 +55,14 @@ public class TagCache {
                 .flatMap(tag -> tag.getTags().stream())
                 .collect(Collectors.toList());
 
-        String invalid = Arrays.stream(split)
-                .filter(t -> StringUtils.isBlank(t) || !tagList.contains(t))
-                .collect(Collectors.joining(","));
-        return invalid;
+//        System.out.println("Tag List:" + tagList);
+//        System.out.println("Tag:" + tags);
+
+//        String invalid = Arrays.stream(split)
+//                .filter(t -> StringUtils.isBlank(t) || !tagList.contains(t))
+//                .collect(Collectors.joining(","));
+        return null;
     }
 
-    public static void main(String[] args) {
-        int i = (5 - 1) >>> 1;
-        System.out.println(i);
-    }
+
 }

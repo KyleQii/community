@@ -1,5 +1,6 @@
 body {
     background: #efefef;
+
 }
 
 .main {
@@ -103,7 +104,31 @@ body {
     margin: 4px;
 }
 
+.discussion-related-t {
+    text-decoration-line: none;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    line-height: 20px;
+    padding: 4px 9px;
+    background-color: #99cfff;
+    font-size: 16px;
+    color: #fff !important;
+    border-radius: 6px;
+    margin: 4px;
+}
+
 .media-Id{
     height: 60px;
 }
 .media-body{}
+
+
+.footer{
+    padding: 10px 25%;
+    color: #666;
+}
+
+.text-muted{
+    display: inline-flex;
+}

@@ -1,13 +1,15 @@
 package seekgroup.college.community.mapper;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Update;import seekgroup.college.community.model.User;
+import org.apache.ibatis.annotations.Update;
+import seekgroup.college.community.model.User;
 import seekgroup.college.community.model.UserExample;
 
+import java.util.List;
+
 /**
- * @author Kyle on 0022 2022/4/22.
+ * @author Kyle on 0008 2022/5/8.
  * @version 1.0
  */
 @Mapper

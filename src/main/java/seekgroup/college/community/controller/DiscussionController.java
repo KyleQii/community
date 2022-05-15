@@ -30,19 +30,21 @@ public class DiscussionController {
     public String discussion(@PathVariable(name="id") Long id, Model model){
         DiscussionDTO discussionDTO=discussionService.getById(id);
 
+
         //为什么这么写
         List<DiscussionDTO> relatedDiscussions=discussionService.selectRelated(discussionDTO);
 
 
+
         List<CommentDTO> comments=commentService.listByTargetId(id, CommentTypeEnum.DISCUSSION);
         //增加阅读数
+
+
         discussionService.incView(id);
         model.addAttribute("discussion",discussionDTO);
         model.addAttribute("comments",comments);
         model.addAttribute("relatedDiscussions", relatedDiscussions);
 
-//        System.out.println(discussionDTO);
-//        System.out.println(comments);
         return "discussion";
     }
 }

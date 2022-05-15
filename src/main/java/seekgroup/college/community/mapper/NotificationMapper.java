@@ -9,8 +9,7 @@ import seekgroup.college.community.model.NotificationExample;
 import java.util.List;
 
 /**
- * 
- * @author Kyle on 0005 2022/5/5.
+ * @author Kyle on 0008 2022/5/8.
  * @version 1.0
  */
 @Mapper

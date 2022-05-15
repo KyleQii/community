@@ -1,7 +1,10 @@
 package seekgroup.college.community.cache;
 
+
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
+import seekgroup.college.community.dto.HotTagDTO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,13 +15,15 @@ import java.util.PriorityQueue;
  * @author Kyle on 0004 2022/5/4.
  * @version 1.0
  */
+
 @Component
 @Data
+@Slf4j
 public class HotTagCache {
     private List<String> hots = new ArrayList<>();
 
     public void updateTags(Map<String, Integer> tags) {
-        int max = 10;
+        int max = 5;
         PriorityQueue<HotTagDTO> priorityQueue = new PriorityQueue<>(max);
 
         tags.forEach((name, priority) -> {
@@ -36,7 +41,7 @@ public class HotTagCache {
             }
         });
 
-
+        log.info("Queue:" + priorityQueue.toString());
         List<String> sortedTags = new ArrayList<>();
 
         HotTagDTO poll = priorityQueue.poll();

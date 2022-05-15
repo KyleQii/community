@@ -1,12 +1,14 @@
 package seekgroup.college.community.service;
 
 
-import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.github.pagehelper.PageHelper;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import seekgroup.college.community.dto.DiscussionDTO;
+import seekgroup.college.community.dto.DiscussionQueryDTO;
 import seekgroup.college.community.dto.PaginationDTO;
 import seekgroup.college.community.exception.CustomizeErrorCode;
 import seekgroup.college.community.exception.CustomizeException;
@@ -27,6 +29,7 @@ import java.util.stream.Collectors;
  * @version 1.0
  */
 @Service
+@Slf4j
 public class DiscussionService {
 
     @Autowired
@@ -38,11 +41,32 @@ public class DiscussionService {
     @Autowired
     private DiscussionMapper discussionMapper;
 
-    public PaginationDTO list(Integer page, Integer size) {
+    public PaginationDTO list(String search, String tag, String sort,Integer page, Integer size) {
+
+        if (StringUtils.isNotBlank(search)) {
+            String[] tags = StringUtils.split(search, " ");
+            search = Arrays
+                    .stream(tags)
+                    .filter(StringUtils::isNotBlank)
+                    .map(t -> t.replace("+", "").replace("*", "").replace("?", ""))
+                    .filter(StringUtils::isNotBlank)
+                    .collect(Collectors.joining("|"));
+        }
+
 
         PaginationDTO paginationDTO = new PaginationDTO();
         Integer totalPage;
-        Integer totalCount = (int)discussionMapper.countByExample(new DiscussionExample());
+
+
+        DiscussionQueryDTO discussionQueryDTO = new DiscussionQueryDTO();
+        discussionQueryDTO.setSearch(search);
+        if (StringUtils.isNotBlank(tag)) {
+            tag = tag.replace("+", "").replace("*", "").replace("?", "");
+            discussionQueryDTO.setTag(tag);
+        }
+
+
+        Integer totalCount = discussionExtMapper.countBySearch(discussionQueryDTO);
 
         if (totalCount % size == 0) {
             totalPage = totalCount / size;
@@ -58,9 +82,10 @@ public class DiscussionService {
         }
 
         paginationDTO.setPagination(totalPage,page);
-        Integer offset=size*(page-1);
-
-        List<Discussion> discussions=discussionMapper.list(offset,size);
+        Integer offset = page < 1 ? 0 : size * (page - 1);
+        discussionQueryDTO.setSize(size);
+        discussionQueryDTO.setPage(offset);
+        List<Discussion> discussions=discussionExtMapper.selectBySearch(discussionQueryDTO);
 
         PageHelper.startPage(offset,size);
         List<DiscussionDTO> discussionDTOList=new ArrayList<>();
@@ -166,14 +191,17 @@ public class DiscussionService {
         if(StringUtils.isBlank(queryDTO.getTag())){
             return new ArrayList<>();
         }
-        String[] tags = org.springframework.util.StringUtils.split(queryDTO.getTag(), ",");
-
+        log.info("selectRelated queryDTO:" + queryDTO.toString());
+        String[] tags = StringUtils.split(queryDTO.getTag(), ",");
+        log.info("selectRelated tags:" + tags.toString());
         String regexpTag = Arrays
                 .stream(tags)
                 .filter(StringUtils::isNotBlank)
                 .map(t -> t.replace("+", "").replace("*", "").replace("?", ""))
                 .filter(StringUtils::isNotBlank)
                 .collect(Collectors.joining("|"));
+        log.info("selectRelated regexpTag:" + regexpTag.toString());
+
         Discussion discussion = new Discussion();
         discussion.setId(queryDTO.getId());
         discussion.setTag(regexpTag);
@@ -185,6 +213,8 @@ public class DiscussionService {
             return discussionDTO;
         }).collect(Collectors.toList());
 
-        return null;
+        log.info("selectRelated discussionDTOS:" + discussionDTOS.toString());
+
+        return discussionDTOS;
     }
 }

@@ -15,17 +15,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link active" aria-current="page" href="#">热门社团</a>-->
+<!--                    </li>-->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">热门社团</a>
+                        <a class="nav-link" href="/study">学习分类</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">社团分类</a>
+                        <a class="nav-link" href="/resource">资源分享</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">资源分享</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">校园论坛</a>   <!--里面包括寻人寻物，表白，吐槽-->
+                        <a class="nav-link" href="/forum">校园论坛</a>   <!--里面包括寻人寻物，表白，吐槽-->
                     </li>
 <!--                    <li class="nav-item">-->
 <!--                        <a class="nav-link" href="#">校内二手市场</a>-->
@@ -37,8 +37,8 @@
 <!--                        <a class="nav-link disabled">Disabled</a>-->
 <!--                    </li>-->
                     <li class="nav-item">
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="搜索社团或用户" aria-label="Search">
+                        <form class="d-flex" method="get">
+                            <input class="form-control me-2" type="search" name="search" placeholder="搜索内容" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">search</button>
                         </form>
                     </li>
@@ -64,8 +64,10 @@
 
                     <li class="nav-item" th:if="${session.user==null}">
 
-                        <a class="nav-link"
-                           href="https://gitee.com/oauth/authorize?client_id=a2b730b14a7047c3f50ce9a1cadb18fcc02b7e0b894a146457d33ea13e63f5db&redirect_uri=http://localhost:8887/callback/gitee&response_type=code">登录</a>
+<!--                        href="https://gitee.com/oauth/authorize?client_id=a2b730b14a7047c3f50ce9a1cadb18fcc02b7e0b894a146457d33ea13e63f5db&redirect_uri=http://localhost:8887/callback/gitee&response_type=code">登录</a>-->
+
+<!--                        <a class="nav-link" th:href="@{https://gitee.com/oauth/authorize(client_id='a2b730b14a7047c3f50ce9a1cadb18fcc02b7e0b894a146457d33ea13e63f5db',redirect_uri=${#httpServletRequest.getServletContext().getAttribute('redirectUri')},response_type='code')}">登录</a>-->
+                        <a class="nav-link" th:href="@{https://gitee.com/oauth/authorize(client_id='a2b730b14a7047c3f50ce9a1cadb18fcc02b7e0b894a146457d33ea13e63f5db',redirect_uri=${@environment.getProperty('gitee.redirect.uri') },response_type='code')}">登录</a>
                     </li>
                 </ul>
 

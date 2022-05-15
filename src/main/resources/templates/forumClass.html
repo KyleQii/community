@@ -6,12 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="referrer" content="no-referrer" />
-
     <title>伙聚</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="/css/community.css" rel="stylesheet">
-
     <script src="js/bootstrap.bundle.min.js" type="application/javascript"></script>
 
 </head>
@@ -33,12 +32,12 @@
 <div class="container main">
     <div class="row">
         <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
-           <h2 style="padding-top: 10px"><i class="bi bi-card-list"></i>发现</h2>
+           <h2 style="padding-top: 10px"><i class="bi bi-card-list"></i>论坛</h2>
             <hr>
             <div class="card mb-2" th:each="discussion:${pagination.data}">
                 <div class="row g-0">
                     <div class="col-md-2" >
-                        <img alt=""  class="img-fluid rounded-start" th:src="${discussion.user.avatarUrl}">
+                        <img  class="img-fluid rounded-start" th:src="${discussion.user.avatarUrl}">
                     </div>
                     <div class="col-md-10">
                         <div class="card-body">
@@ -96,8 +95,6 @@
             <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h4>热门标签</h4>
-<!--                <a th:each="tag : ${tags}" th:href="@{/(page=1,search=${search},tag=${tag},sort=${sort})}"-->
-<!--                   th:text="${tag}" class="community-tag"></a>-->
                 <span class="discussion-tag" th:each="tag : ${tags}">
                         <i class="bi bi-tags"></i>
                         <a th:href="@{/(page=1,tag=${tag})}"

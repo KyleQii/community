@@ -1,6 +1,7 @@
 package seekgroup.college.community.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
+import seekgroup.college.community.dto.DiscussionQueryDTO;
 import seekgroup.college.community.model.Discussion;
 
 import java.util.List;
@@ -16,5 +17,6 @@ public interface DiscussionExtMapper {
     int incView(Discussion record);
     int incCommentCount(Discussion record);
     List<Discussion> selectRelated (Discussion discussion);
-
+    Integer countBySearch(DiscussionQueryDTO discussionQueryDTO);
+    List<Discussion> selectBySearch(DiscussionQueryDTO questionQueryDTO);
 }

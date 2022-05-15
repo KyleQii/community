@@ -3,14 +3,16 @@
 <mapper namespace="seekgroup.college.community.mapper.NotificationMapper">
   <resultMap id="BaseResultMap" type="seekgroup.college.community.model.Notification">
     <!--@mbg.generated-->
-    <!--@Table NOTIFICATION-->
+    <!--@Table notification-->
     <id column="ID" jdbcType="BIGINT" property="id" />
     <result column="NOTIFIER" jdbcType="BIGINT" property="notifier" />
     <result column="RECEIVER" jdbcType="BIGINT" property="receiver" />
     <result column="outerId" jdbcType="BIGINT" property="outerid" />
-    <result column="NOTIFICATION_TYPE" jdbcType="INTEGER" property="notificationType" />
+    <result column="TYPE" jdbcType="INTEGER" property="type" />
     <result column="GMT_CREATE" jdbcType="BIGINT" property="gmtCreate" />
     <result column="STATUS" jdbcType="INTEGER" property="status" />
+    <result column="Notifier_name" jdbcType="VARCHAR" property="notifierName" />
+    <result column="OUTER_TITLE" jdbcType="VARCHAR" property="outerTitle" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <!--@mbg.generated-->
@@ -74,7 +76,7 @@
   </sql>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    ID, NOTIFIER, RECEIVER, outerId, NOTIFICATION_TYPE, GMT_CREATE, "STATUS"
+    ID, NOTIFIER, RECEIVER, outerId, `TYPE`, GMT_CREATE, `STATUS`, Notifier_name, OUTER_TITLE
   </sql>
   <select id="selectByExample" parameterType="seekgroup.college.community.model.NotificationExample" resultMap="BaseResultMap">
     <!--@mbg.generated-->
@@ -83,7 +85,7 @@
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from NOTIFICATION
+    from notification
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -95,33 +97,33 @@
     <!--@mbg.generated-->
     select 
     <include refid="Base_Column_List" />
-    from NOTIFICATION
+    from notification
     where ID = #{id,jdbcType=BIGINT}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     <!--@mbg.generated-->
-    delete from NOTIFICATION
+    delete from notification
     where ID = #{id,jdbcType=BIGINT}
   </delete>
   <delete id="deleteByExample" parameterType="seekgroup.college.community.model.NotificationExample">
     <!--@mbg.generated-->
-    delete from NOTIFICATION
+    delete from notification
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
   <insert id="insert" keyColumn="ID" keyProperty="id" parameterType="seekgroup.college.community.model.Notification" useGeneratedKeys="true">
     <!--@mbg.generated-->
-    insert into NOTIFICATION (NOTIFIER, RECEIVER, outerId, 
-      NOTIFICATION_TYPE, GMT_CREATE, "STATUS"
-      )
+    insert into notification (NOTIFIER, RECEIVER, outerId, 
+      `TYPE`, GMT_CREATE, `STATUS`, 
+      Notifier_name, OUTER_TITLE)
     values (#{notifier,jdbcType=BIGINT}, #{receiver,jdbcType=BIGINT}, #{outerid,jdbcType=BIGINT}, 
-      #{notificationType,jdbcType=INTEGER}, #{gmtCreate,jdbcType=BIGINT}, #{status,jdbcType=INTEGER}
-      )
+      #{type,jdbcType=INTEGER}, #{gmtCreate,jdbcType=BIGINT}, #{status,jdbcType=INTEGER}, 
+      #{notifierName,jdbcType=VARCHAR}, #{outerTitle,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" keyColumn="ID" keyProperty="id" parameterType="seekgroup.college.community.model.Notification" useGeneratedKeys="true">
     <!--@mbg.generated-->
-    insert into NOTIFICATION
+    insert into notification
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="notifier != null">
         NOTIFIER,
@@ -132,14 +134,20 @@
       <if test="outerid != null">
         outerId,
       </if>
-      <if test="notificationType != null">
-        NOTIFICATION_TYPE,
+      <if test="type != null">
+        `TYPE`,
       </if>
       <if test="gmtCreate != null">
         GMT_CREATE,
       </if>
       <if test="status != null">
-        "STATUS",
+        `STATUS`,
+      </if>
+      <if test="notifierName != null and notifierName != ''">
+        Notifier_name,
+      </if>
+      <if test="outerTitle != null and outerTitle != ''">
+        OUTER_TITLE,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -152,8 +160,8 @@
       <if test="outerid != null">
         #{outerid,jdbcType=BIGINT},
       </if>
-      <if test="notificationType != null">
-        #{notificationType,jdbcType=INTEGER},
+      <if test="type != null">
+        #{type,jdbcType=INTEGER},
       </if>
       <if test="gmtCreate != null">
         #{gmtCreate,jdbcType=BIGINT},
@@ -161,18 +169,24 @@
       <if test="status != null">
         #{status,jdbcType=INTEGER},
       </if>
+      <if test="notifierName != null and notifierName != ''">
+        #{notifierName,jdbcType=VARCHAR},
+      </if>
+      <if test="outerTitle != null and outerTitle != ''">
+        #{outerTitle,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
   <select id="countByExample" parameterType="seekgroup.college.community.model.NotificationExample" resultType="java.lang.Long">
     <!--@mbg.generated-->
-    select count(*) from NOTIFICATION
+    select count(*) from notification
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
     <!--@mbg.generated-->
-    update NOTIFICATION
+    update notification
     <set>
       <if test="record.id != null">
         ID = #{record.id,jdbcType=BIGINT},
@@ -186,14 +200,20 @@
       <if test="record.outerid != null">
         outerId = #{record.outerid,jdbcType=BIGINT},
       </if>
-      <if test="record.notificationType != null">
-        NOTIFICATION_TYPE = #{record.notificationType,jdbcType=INTEGER},
+      <if test="record.type != null">
+        `TYPE` = #{record.type,jdbcType=INTEGER},
       </if>
       <if test="record.gmtCreate != null">
         GMT_CREATE = #{record.gmtCreate,jdbcType=BIGINT},
       </if>
       <if test="record.status != null">
-        "STATUS" = #{record.status,jdbcType=INTEGER},
+        `STATUS` = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.notifierName != null">
+        Notifier_name = #{record.notifierName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.outerTitle != null">
+        OUTER_TITLE = #{record.outerTitle,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -202,21 +222,23 @@
   </update>
   <update id="updateByExample" parameterType="map">
     <!--@mbg.generated-->
-    update NOTIFICATION
+    update notification
     set ID = #{record.id,jdbcType=BIGINT},
       NOTIFIER = #{record.notifier,jdbcType=BIGINT},
       RECEIVER = #{record.receiver,jdbcType=BIGINT},
       outerId = #{record.outerid,jdbcType=BIGINT},
-      NOTIFICATION_TYPE = #{record.notificationType,jdbcType=INTEGER},
+      `TYPE` = #{record.type,jdbcType=INTEGER},
       GMT_CREATE = #{record.gmtCreate,jdbcType=BIGINT},
-      "STATUS" = #{record.status,jdbcType=INTEGER}
+      `STATUS` = #{record.status,jdbcType=INTEGER},
+      Notifier_name = #{record.notifierName,jdbcType=VARCHAR},
+      OUTER_TITLE = #{record.outerTitle,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByPrimaryKeySelective" parameterType="seekgroup.college.community.model.Notification">
     <!--@mbg.generated-->
-    update NOTIFICATION
+    update notification
     <set>
       <if test="notifier != null">
         NOTIFIER = #{notifier,jdbcType=BIGINT},
@@ -227,27 +249,35 @@
       <if test="outerid != null">
         outerId = #{outerid,jdbcType=BIGINT},
       </if>
-      <if test="notificationType != null">
-        NOTIFICATION_TYPE = #{notificationType,jdbcType=INTEGER},
+      <if test="type != null">
+        `TYPE` = #{type,jdbcType=INTEGER},
       </if>
       <if test="gmtCreate != null">
         GMT_CREATE = #{gmtCreate,jdbcType=BIGINT},
       </if>
       <if test="status != null">
-        "STATUS" = #{status,jdbcType=INTEGER},
+        `STATUS` = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="notifierName != null and notifierName != ''">
+        Notifier_name = #{notifierName,jdbcType=VARCHAR},
+      </if>
+      <if test="outerTitle != null and outerTitle != ''">
+        OUTER_TITLE = #{outerTitle,jdbcType=VARCHAR},
       </if>
     </set>
     where ID = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="seekgroup.college.community.model.Notification">
     <!--@mbg.generated-->
-    update NOTIFICATION
+    update notification
     set NOTIFIER = #{notifier,jdbcType=BIGINT},
       RECEIVER = #{receiver,jdbcType=BIGINT},
       outerId = #{outerid,jdbcType=BIGINT},
-      NOTIFICATION_TYPE = #{notificationType,jdbcType=INTEGER},
+      `TYPE` = #{type,jdbcType=INTEGER},
       GMT_CREATE = #{gmtCreate,jdbcType=BIGINT},
-      "STATUS" = #{status,jdbcType=INTEGER}
+      `STATUS` = #{status,jdbcType=INTEGER},
+      Notifier_name = #{notifierName,jdbcType=VARCHAR},
+      OUTER_TITLE = #{outerTitle,jdbcType=VARCHAR}
     where ID = #{id,jdbcType=BIGINT}
   </update>
 </mapper>
