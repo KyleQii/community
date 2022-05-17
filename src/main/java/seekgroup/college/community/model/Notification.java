@@ -10,12 +10,13 @@ import lombok.Data;
 public class Notification {
     private Long id;
 
+    //发出通知的人
     private Long notifier;
-
+    //接收者
     private Long receiver;
-
+    //问题id或评论id  外键 parentId -commentId
     private Long outerid;
-
+    //评论或回复
     private Integer type;
 
     private Long gmtCreate;

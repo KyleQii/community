@@ -32,7 +32,7 @@ function comment2target(targetId,type,content){
                 if (response.code == 2003) {
                     var isAccepted = confirm(response.message);
                     if (isAccepted) {//页面无法传递元素
-                        window.open("https://gitee.com/oauth/authorize?client_id=a2b730b14a7047c3f50ce9a1cadb18fcc02b7e0b894a146457d33ea13e63f5db&redirect_uri=http://localhost:8887/callback/gitee&response_type=code")
+                        window.open("https://gitee.com/oauth/authorize?client_id=a2b730b14a7047c3f50ce9a1cadb18fcc02b7e0b894a146457d33ea13e63f5db&redirect_uri=http://localhost/callback/gitee&response_type=code")
                         //存到浏览器里面
                         window.localStorage.setItem("closable",true);
                     }

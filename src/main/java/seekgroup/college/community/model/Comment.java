@@ -8,12 +8,15 @@ import lombok.Data;
  */
 @Data
 public class Comment {
-    private Long id;
 
+    private Long id;
+    //父类id
     private Long parentId;
 
+    //父类类型
     private Integer type;
 
+    //评论人id
     private Long commentator;
 
     private Long gmtCreate;

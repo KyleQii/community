@@ -26,7 +26,7 @@ public class HotTagTasks {
     @Autowired
     private HotTagCache hotTagCache;
 
-    @Scheduled(fixedRate = 1000 *5)
+    @Scheduled(fixedRate = 1000 *300)
     public void hotTagSchedule() {
         int offset = 0;
         int limit = 20;
@@ -41,11 +41,15 @@ public class HotTagTasks {
                 for (String tag : tags) {
                     Integer priority = priorities.get(tag);
                     if (priority != null) {
-                        priorities.put(tag, priority + 5 + question.getCommentCount());
+                        priorities.put(tag, priority + 5 * question.getCommentCount());
                     } else {
-                        priorities.put(tag, 5 + question.getCommentCount());
+                        log.info("Comment Count:" + question);
+
+                        priorities.put(tag, 5 * question.getCommentCount());
+
                     }
                 }
+
             }
             offset += limit;
         }

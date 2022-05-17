@@ -7,6 +7,9 @@ body {
     background-color: white;
 
 }
+a {
+    text-decoration: none; /* 去除默认下划线 */
+}
 
 .btn-publish {
     float: right;
@@ -125,6 +128,7 @@ body {
 
 
 .footer{
+    text-align: center;
     padding: 10px 25%;
     color: #666;
 }

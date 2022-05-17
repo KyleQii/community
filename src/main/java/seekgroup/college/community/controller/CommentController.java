@@ -26,7 +26,7 @@ public class CommentController {
 //获取二级列表
     @ResponseBody
     @RequestMapping(value = "/comment",method = RequestMethod.POST)
-    public Object post(@RequestBody CommentCreateDTO commentCreateDTO,
+    public Object post(@RequestBody CommentCreateDTO commentCreateDTO,//自动赋值
                        HttpServletRequest request){
 
         User user = (User)request.getSession().getAttribute("user");

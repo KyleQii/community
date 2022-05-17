@@ -143,7 +143,7 @@ public class DiscussionService {
     public DiscussionDTO getById(Long id) {
         Discussion discussion=discussionMapper.selectByPrimaryKey(id);
         if(discussion==null){
-            throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
+            throw new CustomizeException(CustomizeErrorCode.DISCUSSION_NOT_FOUND);
         }
         DiscussionDTO discussionDTO = new DiscussionDTO();
         BeanUtils.copyProperties(discussion,discussionDTO);
@@ -172,7 +172,7 @@ public class DiscussionService {
                     .andIdEqualTo(discussion.getId());
             int updated=discussionMapper.updateByExampleSelective(updateDiscussion, example);
             if(updated!=1){
-                throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
+                throw new CustomizeException(CustomizeErrorCode.DISCUSSION_NOT_FOUND);
             }
         }
     }

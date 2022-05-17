@@ -33,10 +33,8 @@ public class AuthorizeController {
     @Value("${gitee.redirect.uri}")
     private String redirectUri;
 
-
     @Autowired
     private UserService userService;
-
 
     @GetMapping("/callback/gitee")
     public void callback(@RequestParam(name = "code") String code,
@@ -75,9 +73,6 @@ public class AuthorizeController {
             e.printStackTrace();
         }
     }
-
-
-
     @GetMapping("/logout")
     public String logout(HttpServletRequest request,
                          HttpServletResponse response){
@@ -87,5 +82,4 @@ public class AuthorizeController {
         response.addCookie(cookie);
         return "redirect:/";
     }
-
 }

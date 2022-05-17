@@ -1,5 +1,6 @@
 package seekgroup.college.community.interceptor;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -20,6 +21,7 @@ import java.util.List;
  * @version 1.0
  */
 @Service
+@Slf4j
 public class SessionInterceptor implements HandlerInterceptor {
 
     @Autowired
@@ -38,13 +40,13 @@ public class SessionInterceptor implements HandlerInterceptor {
                 if (cookie.getName().equals("token")) {
                     String token = cookie.getValue();
                     UserExample userExample = new UserExample();
-
                     userExample.createCriteria()
                             .andTokenEqualTo(token);
                     List<User> users = userMapper.selectByExample(userExample);
                     if (users.size() != 0) {
                         HttpSession session = request.getSession();
                         session.setAttribute("user", users.get(0));
+
                         Long unreadCount = notificationService.unreadCount(users.get(0).getId());
                         session.setAttribute("unreadCount", unreadCount);
                     }

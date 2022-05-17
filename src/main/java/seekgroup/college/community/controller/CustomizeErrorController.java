@@ -1,6 +1,7 @@
 package seekgroup.college.community.controller;
 
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -19,11 +20,13 @@ import javax.servlet.http.HttpServletRequest;
 
 @Controller
 @RequestMapping("${server.error.path:${error.path:/error}}") //
+@Slf4j
 public class CustomizeErrorController implements ErrorController {
 
     @RequestMapping(produces = MediaType.TEXT_HTML_VALUE)// /error post get
     public ModelAndView errorHtml(HttpServletRequest request, Model model) {
         HttpStatus status = getStatus(request);
+        log.info("Status:" + status);
         if (status.is4xxClientError()){
             model.addAttribute("message","请求好像出错了哦，要不然换个姿势？");
         }
