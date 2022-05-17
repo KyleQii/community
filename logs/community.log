@@ -12310,3 +12310,113 @@ JavaScript 非常容易学。
 2022-05-17 22:12:40.127  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=1, title=12354, description=qwrywe, gmtCreate=1651994421164, gmtModified=1652009303489, creator=1, commentCount=0, viewCount=6, likeCount=0, tag=java,python)
 2022-05-17 22:12:40.127  INFO 30068 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=校园论坛, priority=5), HotTagDTO(name=456, priority=15), HotTagDTO(name=学习, priority=20), HotTagDTO(name=java, priority=15), HotTagDTO(name=jh, priority=15)]
 2022-05-17 22:12:40.127  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Tue May 17 22:12:40 CST 2022
+2022-05-17 22:17:40.123  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Tue May 17 22:17:40 CST 2022
+2022-05-17 22:17:40.130  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=22, title=校园论坛, description=发内容, gmtCreate=1652009363498, gmtModified=1652009363498, creator=1, commentCount=0, viewCount=9, likeCount=0, tag=1)
+2022-05-17 22:17:40.130  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=21, title=毕业, description=我们要毕业了, gmtCreate=1652000569747, gmtModified=1652000569747, creator=5, commentCount=1, viewCount=13, likeCount=0, tag=毕业)
+2022-05-17 22:17:40.130  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=20, title=看个电影吧, description=一张圆桌，几十个人你一言我一语地讨论具体的细则，间或休会去休息室吃几碟点心，所有人效忠元首，一切讨论的前提是清晰的，要完善的仅是终极解决方案如何落地：先拿哪个国家开涮？如何安抚本国犹太人的日尔曼裔亲戚朋友，万一他们抗议怎么办？花488天把全欧洲的犹太人清除干净会浪费多少颗子弹？是不是送进毒气室会更省军力？把犹太人从各地运送到焚化炉运力承不承受得住？, gmtCreate=1652000557879, gmtModified=1652000557879, creator=5, commentCount=0, viewCount=12, likeCount=0, tag=电影)
+2022-05-17 22:17:40.130  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=19, title=测试, description=这是测试内容, gmtCreate=1652000439565, gmtModified=1652000439565, creator=5, commentCount=0, viewCount=5, likeCount=0, tag=测试)
+2022-05-17 22:17:40.130  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=18, title=4111, description=1321564653, gmtCreate=1652000415234, gmtModified=1652000415234, creator=4, commentCount=0, viewCount=6, likeCount=0, tag=11)
+2022-05-17 22:17:40.130  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=17, title=你好, description=你好你好哦, gmtCreate=1652000185681, gmtModified=1652000185681, creator=4, commentCount=0, viewCount=1, likeCount=0, tag=新人)
+2022-05-17 22:17:40.131  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=16, title=疫情快点好, description=疫情快点好, gmtCreate=1652000165903, gmtModified=1652000165903, creator=4, commentCount=0, viewCount=1, likeCount=0, tag=疫情)
+2022-05-17 22:17:40.131  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=15, title=高考加油, description=稳住心态，营造轻松氛围
+高考不仅考孩子，更是考咱们家长，孩子心理压力大，家长心理压力更大！
+
+对于高考，有些家长比孩子还急，不停地唠叨，还有些家长担心孩子考不好，整天愁眉苦脸，很少说话，殊不知，过度紧张的环境，不仅会影响孩子们的获取率，甚至还会影响他们在高考战场中的临场发挥。家长自己要保持一个冷静而稳定的心态，先调节好自身的情绪波动，只有自己情绪稳定，才能更好地支持孩子。, gmtCreate=1652000067317, gmtModified=1652000067317, creator=4, commentCount=0, viewCount=17, likeCount=0, tag=学习)
+2022-05-17 22:17:40.131  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=13, title=母亲节快乐, description=母亲节（Mother's Day），是一个感谢母亲的节日。现代的母亲节起源于美国，是每年5月的第二个星期日。母亲们在这一天通常会收到礼物，康乃馨被视为献给母亲的花，而中国的母亲花是萱草花，又叫忘忧草。 [1], gmtCreate=1651999798749, gmtModified=1651999798749, creator=3, commentCount=0, viewCount=0, likeCount=0, tag=节日)
+2022-05-17 22:17:40.131  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=12, title=我爱学习, description=我很爱学习, gmtCreate=1651999719875, gmtModified=1651999719875, creator=3, commentCount=0, viewCount=7, likeCount=0, tag=学习,资源分享)
+2022-05-17 22:17:40.131  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=11, title=Java, description=JavaScript 是 Web 的编程语言。
+
+所有现代的 HTML 页面都使用 JavaScript。
+
+JavaScript 非常容易学。
+
+本教程将教你学习从初级到高级 JavaScript 知识。, gmtCreate=1651999313153, gmtModified=1651999313153, creator=2, commentCount=0, viewCount=3, likeCount=0, tag=Java,html,javascript)
+2022-05-17 22:17:40.131  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=11, title=Java, description=JavaScript 是 Web 的编程语言。
+
+所有现代的 HTML 页面都使用 JavaScript。
+
+JavaScript 非常容易学。
+
+本教程将教你学习从初级到高级 JavaScript 知识。, gmtCreate=1651999313153, gmtModified=1651999313153, creator=2, commentCount=0, viewCount=3, likeCount=0, tag=Java,html,javascript)
+2022-05-17 22:17:40.131  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=11, title=Java, description=JavaScript 是 Web 的编程语言。
+
+所有现代的 HTML 页面都使用 JavaScript。
+
+JavaScript 非常容易学。
+
+本教程将教你学习从初级到高级 JavaScript 知识。, gmtCreate=1651999313153, gmtModified=1651999313153, creator=2, commentCount=0, viewCount=3, likeCount=0, tag=Java,html,javascript)
+2022-05-17 22:17:40.131  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=9, title=我的校内趣事, description=十几年前上中学，那时候是在县城最好的初中上学，在校住宿，一日三餐都吃的学校。那时候家里穷，每次吃饭都是算准了吃几个菜，几块钱，不能多，多了可能第二餐就吃馒头了。
+
+那是个寒冬，下午下课吃晚饭，照常跟哥几个一起打饭吃饭，聊天。当时氛围都很不错，有说有笑。就在吃到一半的时候，发生了一件很尴尬也很气愤的事情。对，没错，我在吃青菜的时候，吃到了莫名其妙的东西。（之前也就听到有同学说，会发现菜里面会有虫子，线头啥的杂物）哪个晓得这次我就中招了。在吃青菜的时候，就感觉好像咬到了什么软软的东西，开始以为是今天的肉比较韧，所以就使劲咀嚼了一下，对，没错，就是这一下我就后悔了，因为咀嚼的这一下，我感觉那玩意爆浆了（就像撒尿牛丸爆浆的那种感觉），哎呀。一股清爽的气味直冲脑门，那味道特别熟悉，就像小时候在家里干农活，收稻谷的时候，经常会有这样的气味（好像是稻谷会招这样的虫子）。当时，我憋着气涨红了脸，对面桌的兄弟看我这样被吓的不轻，以为我噎住了，正想给我拍背来着，只见我拿着吃饭的碗，以百米冲刺的速度跑到了洗碗池，噗的一下就吐了，然后很不舍的把没有吃完的半碗饭菜倒了。里里外外把碗刷了好几遍，然后猛的灌水漱口，在漱口漱了十几次后，那股子味道依旧在口鼻脑门子里来回串，没辙了，我忙跑到宿舍，牙刷一拿，牙膏一挤，端着铁杯子就往洗漱间跑。在我刷坏了两只牙刷，挤掉了半只牙膏以后，终于感觉嘴巴里面正常了。忙完这些以后，晚自习的铃声响了，把牙刷杯子一放，赶忙跑晚自习。
+
+坐在位置上，越想越气，饭没吃好就算了，牙刷牙膏浪费了不说，心情还不好了，心里都有阴影了。为了让同学们以后不遇到我类似的问题，我心里一个念头油然而生，对，我要写信给校长办公室，我要反应。
+
+那时候小伙子年轻气盛，心里一想，就立刻实施了。从课桌里面，抽出了自己觉得最好的记事本，洋洋洒洒的写了好几张，先是说了咱们学校的教学质量多好多好，但是学生压力大，容易饿啥的，营养需要跟的上，然后在中间就说了今天的事情，最后再说咱们学校的领导是多么的认真负责以人为本啥啥的，反正就是一顿彩虹屁。最后，还很勇敢的把自己的班级和名字实名写了上去，写的时候，心慌慌的，怕被别人知道找麻烦。但是后来自己一想，男子汉大丈夫，敢作敢当，就实名了。花了两节课写完这些以后，就下晚自习了，那天我是最后一个走的。因为校长办公室就在楼梯间的中间隔层。在下楼的时候，上看下看，生怕别人看见，因为楼梯间灯坏了，心里一紧张忘记了看几楼，看见门就从地缝卡了进去。卡进去以后就后悔了，突然发现头顶赫然写着主任办公室几个大字，擦，丢错地方了。但是也没办法呀，也拿不出来了，就这样开开心心的回宿舍了。
+
+第二天自习课的时候，只见戴着眼镜的主任，在教室外面晃荡了一圈，站在外面往教室里面瞧，在看到我以后，对我露出了会心的一笑，我心里咯噔一下，难道主任要批评我。然后他啥也没有说啥也没做就走了，（现在看来那时候他那会心的一笑，应该是在想着小伙子不错，还会提意见）。从那以后，每次午饭，晚饭，学校主任都会守在饭堂最显眼的地方，时不时看看伙食，时不时关心学生，打那时候起，我就再也没有吃到过异物，学校的教学质量也一直名列前茅。, gmtCreate=1651999075780, gmtModified=1651999075780, creator=2, commentCount=1, viewCount=12, likeCount=0, tag=校园论坛)
+2022-05-17 22:17:40.135  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=7, title=the first, description=0qfsw!3r r32reyrgwrhgdewdarGRW, gmtCreate=1651998457825, gmtModified=1651998457825, creator=2, commentCount=0, viewCount=1, likeCount=0, tag=QINZ)
+2022-05-17 22:17:40.135  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=5, title=校园论坛, description=校园论坛内容, gmtCreate=1651997103023, gmtModified=1651997103023, creator=1, commentCount=0, viewCount=1, likeCount=0, tag=标签)
+2022-05-17 22:17:40.135  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=4, title=资源分享1, description=资源分享内容, gmtCreate=1651997075264, gmtModified=1651997075264, creator=1, commentCount=0, viewCount=4, likeCount=0, tag=资源分享,分享1)
+2022-05-17 22:17:40.135  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=3, title=12, description=qwryweiuhuf, gmtCreate=1651994850111, gmtModified=1651995007145, creator=1, commentCount=3, viewCount=13, likeCount=0, tag=java,456,jh)
+2022-05-17 22:17:40.135  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=3, title=12, description=qwryweiuhuf, gmtCreate=1651994850111, gmtModified=1651995007145, creator=1, commentCount=3, viewCount=13, likeCount=0, tag=java,456,jh)
+2022-05-17 22:17:40.136  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=3, title=12, description=qwryweiuhuf, gmtCreate=1651994850111, gmtModified=1651995007145, creator=1, commentCount=3, viewCount=13, likeCount=0, tag=java,456,jh)
+2022-05-17 22:17:40.138  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=1, title=12354, description=qwrywe, gmtCreate=1651994421164, gmtModified=1652009303489, creator=1, commentCount=0, viewCount=6, likeCount=0, tag=java,python)
+2022-05-17 22:17:40.138  INFO 30068 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=校园论坛, priority=5), HotTagDTO(name=456, priority=15), HotTagDTO(name=学习, priority=20), HotTagDTO(name=java, priority=15), HotTagDTO(name=jh, priority=15)]
+2022-05-17 22:17:40.139  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Tue May 17 22:17:40 CST 2022
+2022-05-17 22:17:46.893  INFO 30068 --- [http-nio-80-exec-5] s.c.c.c.CustomizeErrorController         : Status:404 NOT_FOUND
+2022-05-17 22:17:50.769  INFO 30068 --- [http-nio-80-exec-3] s.c.c.c.CustomizeErrorController         : Status:404 NOT_FOUND
+2022-05-17 22:19:58.214  INFO 30068 --- [http-nio-80-exec-1] s.c.c.c.CustomizeErrorController         : Status:404 NOT_FOUND
+2022-05-17 22:20:05.469  INFO 30068 --- [http-nio-80-exec-7] s.c.c.c.CustomizeErrorController         : Status:404 NOT_FOUND
+2022-05-17 22:22:40.126  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule start Tue May 17 22:22:40 CST 2022
+2022-05-17 22:22:40.129  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=22, title=校园论坛, description=发内容, gmtCreate=1652009363498, gmtModified=1652009363498, creator=1, commentCount=0, viewCount=9, likeCount=0, tag=1)
+2022-05-17 22:22:40.129  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=21, title=毕业, description=我们要毕业了, gmtCreate=1652000569747, gmtModified=1652000569747, creator=5, commentCount=1, viewCount=13, likeCount=0, tag=毕业)
+2022-05-17 22:22:40.129  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=20, title=看个电影吧, description=一张圆桌，几十个人你一言我一语地讨论具体的细则，间或休会去休息室吃几碟点心，所有人效忠元首，一切讨论的前提是清晰的，要完善的仅是终极解决方案如何落地：先拿哪个国家开涮？如何安抚本国犹太人的日尔曼裔亲戚朋友，万一他们抗议怎么办？花488天把全欧洲的犹太人清除干净会浪费多少颗子弹？是不是送进毒气室会更省军力？把犹太人从各地运送到焚化炉运力承不承受得住？, gmtCreate=1652000557879, gmtModified=1652000557879, creator=5, commentCount=0, viewCount=12, likeCount=0, tag=电影)
+2022-05-17 22:22:40.129  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=19, title=测试, description=这是测试内容, gmtCreate=1652000439565, gmtModified=1652000439565, creator=5, commentCount=0, viewCount=5, likeCount=0, tag=测试)
+2022-05-17 22:22:40.129  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=18, title=4111, description=1321564653, gmtCreate=1652000415234, gmtModified=1652000415234, creator=4, commentCount=0, viewCount=6, likeCount=0, tag=11)
+2022-05-17 22:22:40.129  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=17, title=你好, description=你好你好哦, gmtCreate=1652000185681, gmtModified=1652000185681, creator=4, commentCount=0, viewCount=1, likeCount=0, tag=新人)
+2022-05-17 22:22:40.129  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=16, title=疫情快点好, description=疫情快点好, gmtCreate=1652000165903, gmtModified=1652000165903, creator=4, commentCount=0, viewCount=1, likeCount=0, tag=疫情)
+2022-05-17 22:22:40.130  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=15, title=高考加油, description=稳住心态，营造轻松氛围
+高考不仅考孩子，更是考咱们家长，孩子心理压力大，家长心理压力更大！
+
+对于高考，有些家长比孩子还急，不停地唠叨，还有些家长担心孩子考不好，整天愁眉苦脸，很少说话，殊不知，过度紧张的环境，不仅会影响孩子们的获取率，甚至还会影响他们在高考战场中的临场发挥。家长自己要保持一个冷静而稳定的心态，先调节好自身的情绪波动，只有自己情绪稳定，才能更好地支持孩子。, gmtCreate=1652000067317, gmtModified=1652000067317, creator=4, commentCount=0, viewCount=17, likeCount=0, tag=学习)
+2022-05-17 22:22:40.130  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=13, title=母亲节快乐, description=母亲节（Mother's Day），是一个感谢母亲的节日。现代的母亲节起源于美国，是每年5月的第二个星期日。母亲们在这一天通常会收到礼物，康乃馨被视为献给母亲的花，而中国的母亲花是萱草花，又叫忘忧草。 [1], gmtCreate=1651999798749, gmtModified=1651999798749, creator=3, commentCount=0, viewCount=0, likeCount=0, tag=节日)
+2022-05-17 22:22:40.130  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=12, title=我爱学习, description=我很爱学习, gmtCreate=1651999719875, gmtModified=1651999719875, creator=3, commentCount=0, viewCount=7, likeCount=0, tag=学习,资源分享)
+2022-05-17 22:22:40.130  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=11, title=Java, description=JavaScript 是 Web 的编程语言。
+
+所有现代的 HTML 页面都使用 JavaScript。
+
+JavaScript 非常容易学。
+
+本教程将教你学习从初级到高级 JavaScript 知识。, gmtCreate=1651999313153, gmtModified=1651999313153, creator=2, commentCount=0, viewCount=3, likeCount=0, tag=Java,html,javascript)
+2022-05-17 22:22:40.130  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=11, title=Java, description=JavaScript 是 Web 的编程语言。
+
+所有现代的 HTML 页面都使用 JavaScript。
+
+JavaScript 非常容易学。
+
+本教程将教你学习从初级到高级 JavaScript 知识。, gmtCreate=1651999313153, gmtModified=1651999313153, creator=2, commentCount=0, viewCount=3, likeCount=0, tag=Java,html,javascript)
+2022-05-17 22:22:40.130  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=11, title=Java, description=JavaScript 是 Web 的编程语言。
+
+所有现代的 HTML 页面都使用 JavaScript。
+
+JavaScript 非常容易学。
+
+本教程将教你学习从初级到高级 JavaScript 知识。, gmtCreate=1651999313153, gmtModified=1651999313153, creator=2, commentCount=0, viewCount=3, likeCount=0, tag=Java,html,javascript)
+2022-05-17 22:22:40.130  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=9, title=我的校内趣事, description=十几年前上中学，那时候是在县城最好的初中上学，在校住宿，一日三餐都吃的学校。那时候家里穷，每次吃饭都是算准了吃几个菜，几块钱，不能多，多了可能第二餐就吃馒头了。
+
+那是个寒冬，下午下课吃晚饭，照常跟哥几个一起打饭吃饭，聊天。当时氛围都很不错，有说有笑。就在吃到一半的时候，发生了一件很尴尬也很气愤的事情。对，没错，我在吃青菜的时候，吃到了莫名其妙的东西。（之前也就听到有同学说，会发现菜里面会有虫子，线头啥的杂物）哪个晓得这次我就中招了。在吃青菜的时候，就感觉好像咬到了什么软软的东西，开始以为是今天的肉比较韧，所以就使劲咀嚼了一下，对，没错，就是这一下我就后悔了，因为咀嚼的这一下，我感觉那玩意爆浆了（就像撒尿牛丸爆浆的那种感觉），哎呀。一股清爽的气味直冲脑门，那味道特别熟悉，就像小时候在家里干农活，收稻谷的时候，经常会有这样的气味（好像是稻谷会招这样的虫子）。当时，我憋着气涨红了脸，对面桌的兄弟看我这样被吓的不轻，以为我噎住了，正想给我拍背来着，只见我拿着吃饭的碗，以百米冲刺的速度跑到了洗碗池，噗的一下就吐了，然后很不舍的把没有吃完的半碗饭菜倒了。里里外外把碗刷了好几遍，然后猛的灌水漱口，在漱口漱了十几次后，那股子味道依旧在口鼻脑门子里来回串，没辙了，我忙跑到宿舍，牙刷一拿，牙膏一挤，端着铁杯子就往洗漱间跑。在我刷坏了两只牙刷，挤掉了半只牙膏以后，终于感觉嘴巴里面正常了。忙完这些以后，晚自习的铃声响了，把牙刷杯子一放，赶忙跑晚自习。
+
+坐在位置上，越想越气，饭没吃好就算了，牙刷牙膏浪费了不说，心情还不好了，心里都有阴影了。为了让同学们以后不遇到我类似的问题，我心里一个念头油然而生，对，我要写信给校长办公室，我要反应。
+
+那时候小伙子年轻气盛，心里一想，就立刻实施了。从课桌里面，抽出了自己觉得最好的记事本，洋洋洒洒的写了好几张，先是说了咱们学校的教学质量多好多好，但是学生压力大，容易饿啥的，营养需要跟的上，然后在中间就说了今天的事情，最后再说咱们学校的领导是多么的认真负责以人为本啥啥的，反正就是一顿彩虹屁。最后，还很勇敢的把自己的班级和名字实名写了上去，写的时候，心慌慌的，怕被别人知道找麻烦。但是后来自己一想，男子汉大丈夫，敢作敢当，就实名了。花了两节课写完这些以后，就下晚自习了，那天我是最后一个走的。因为校长办公室就在楼梯间的中间隔层。在下楼的时候，上看下看，生怕别人看见，因为楼梯间灯坏了，心里一紧张忘记了看几楼，看见门就从地缝卡了进去。卡进去以后就后悔了，突然发现头顶赫然写着主任办公室几个大字，擦，丢错地方了。但是也没办法呀，也拿不出来了，就这样开开心心的回宿舍了。
+
+第二天自习课的时候，只见戴着眼镜的主任，在教室外面晃荡了一圈，站在外面往教室里面瞧，在看到我以后，对我露出了会心的一笑，我心里咯噔一下，难道主任要批评我。然后他啥也没有说啥也没做就走了，（现在看来那时候他那会心的一笑，应该是在想着小伙子不错，还会提意见）。从那以后，每次午饭，晚饭，学校主任都会守在饭堂最显眼的地方，时不时看看伙食，时不时关心学生，打那时候起，我就再也没有吃到过异物，学校的教学质量也一直名列前茅。, gmtCreate=1651999075780, gmtModified=1651999075780, creator=2, commentCount=1, viewCount=12, likeCount=0, tag=校园论坛)
+2022-05-17 22:22:40.130  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=7, title=the first, description=0qfsw!3r r32reyrgwrhgdewdarGRW, gmtCreate=1651998457825, gmtModified=1651998457825, creator=2, commentCount=0, viewCount=1, likeCount=0, tag=QINZ)
+2022-05-17 22:22:40.130  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=5, title=校园论坛, description=校园论坛内容, gmtCreate=1651997103023, gmtModified=1651997103023, creator=1, commentCount=0, viewCount=1, likeCount=0, tag=标签)
+2022-05-17 22:22:40.130  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=4, title=资源分享1, description=资源分享内容, gmtCreate=1651997075264, gmtModified=1651997075264, creator=1, commentCount=0, viewCount=4, likeCount=0, tag=资源分享,分享1)
+2022-05-17 22:22:40.130  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=3, title=12, description=qwryweiuhuf, gmtCreate=1651994850111, gmtModified=1651995007145, creator=1, commentCount=3, viewCount=13, likeCount=0, tag=java,456,jh)
+2022-05-17 22:22:40.130  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=3, title=12, description=qwryweiuhuf, gmtCreate=1651994850111, gmtModified=1651995007145, creator=1, commentCount=3, viewCount=13, likeCount=0, tag=java,456,jh)
+2022-05-17 22:22:40.130  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=3, title=12, description=qwryweiuhuf, gmtCreate=1651994850111, gmtModified=1651995007145, creator=1, commentCount=3, viewCount=13, likeCount=0, tag=java,456,jh)
+2022-05-17 22:22:40.131  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : Comment Count:Discussion(id=1, title=12354, description=qwrywe, gmtCreate=1651994421164, gmtModified=1652009303489, creator=1, commentCount=0, viewCount=6, likeCount=0, tag=java,python)
+2022-05-17 22:22:40.131  INFO 30068 --- [scheduling-1] s.college.community.cache.HotTagCache    : Queue:[HotTagDTO(name=校园论坛, priority=5), HotTagDTO(name=456, priority=15), HotTagDTO(name=学习, priority=20), HotTagDTO(name=java, priority=15), HotTagDTO(name=jh, priority=15)]
+2022-05-17 22:22:40.131  INFO 30068 --- [scheduling-1] s.c.community.schedule.HotTagTasks       : hotTagSchedule stop Tue May 17 22:22:40 CST 2022
